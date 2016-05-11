@@ -1,0 +1,15 @@
+<h1>New Quote page</h1>
+
+<form action="<%= quote_path(@conn, :create) %>" method="POST">
+  <input type="hidden" name="_method" value="create"/>
+  <input type="hidden" name="_csrf_token" value="<%= get_csrf_token %>"/>
+  <div class="form-group">
+    <label for="saying">Saying</label>
+    <input type="text" name="quote[saying]" id="saying" class="form-control" />
+
+    <label for="author">Author</label>
+    <input type="text" name="quote[author]" id="author" class="form-control" />
+
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

@@ -1,0 +1,19 @@
+<h1>Quote page</h1>
+<a href="<%= quote_path(@conn, :new) %>">New quote</a>
+
+<table>
+  <thead>
+    <tr>
+      <th>Saying</th>
+      <th>Author</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <%= for q <- @quotes do %>
+  <tr>
+    <td><a href="<%= quote_path(@conn, :show, q.id) %>"><%= q.saying %></a></td>
+    <td><%= q.author %></td>
+    <td><a href="<%= quote_path(@conn, :edit, q.id) %>">edit</a></td>
+  </tr>
+  <% end %>
+</table>

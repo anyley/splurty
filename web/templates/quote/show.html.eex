@@ -1,0 +1,11 @@
+<h1>Show Quote page</h1>
+<a href="<%= quote_path(@conn, :index) %>">index</a>
+
+<div class="form-group">
+  <div>
+    <b>Saying:</b> <div class="form-control"><%= @quote.saying %></div>
+  </div>
+  <div>
+    <b>Author:</b> <div class="form-control"><%= @quote.author %></div>
+  </div>
+</div>
